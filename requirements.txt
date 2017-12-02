@@ -1,0 +1,8 @@
+Django
+django-solo
+gunicorn
+Pillow
+psycopg2
+requests
+raven
+django-froala-editor

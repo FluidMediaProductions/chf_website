@@ -1,0 +1,11 @@
+{% extends 'website_main/base.html' %}
+{% block content %}
+    <div class="bg-dark">
+        <div class="container py-5 text-center">
+            <h1 class="text-uppercase text-light font-weight-bold my-4">{{ page.title }}</h1>
+        </div>
+    </div>
+    {% autoescape off %}
+        {{ page.content }}
+    {% endautoescape %}
+{% endblock %}

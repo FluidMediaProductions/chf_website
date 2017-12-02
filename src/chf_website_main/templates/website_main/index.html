@@ -1,0 +1,149 @@
+{% extends "website_main/base.html" %}
+{% load static %}
+{% block content %}
+<div id="mainCarousel" class="carousel slide" style="height: 500px;" data-ride="carousel">
+    <div class="carousel-icon text-center">
+        <i class="fa fa-chevron-circle-down fa-3x" aria-hidden="true"></i>
+    </div>
+    <div class="carousel-inner h-100">
+        {% for slide in front_page_slides %}
+            <div class="carousel-item {% if forloop.first %}active {% endif %}h-100">
+                <img class="d-block h-100" src="{{ slide.img.url }}" alt="">
+            </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="bg-dark py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-9 m-auto">
+                <h3 class="text-center text-light">
+                    CHF Estate Agency is a modern day hybrid estate agent combining the
+                    flexibility of an online agent with the local knowledge and
+                    personal service of a traditional high street agent. <br>
+                    <span class="d-inline-block mt-2 font-weight-bold">Move with the times...</span>
+                </h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <h1 class="text-uppercase text-center brand-text display-4">How can we help you?</h1>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <a href="{% url 'properties' %}">
+                <div class="mt-5 mb-3 mx-auto h3 text-light circle-text bg-house-1">
+                    <span>Properties for sale</span>
+                </div>
+            </a>
+            <h3 class="text-center brand-text font-weight-bold">Buying</h3>
+        </div>
+        <div class="col-12 col-md-6">
+            <a href="{% url 'contact' %}">
+                <div class="mt-5 mb-3 mx-auto h3 text-light circle-text bg-house-2">
+                    <span>Sell your property with CHF</span>
+                </div>
+            </a>
+            <h3 class="text-center text-info font-weight-bold">Selling</h3>
+        </div>
+    </div>
+</div>
+<div style="background: url({% static 'img/../../static/img/newport-bg.jpg' %});background-size: cover;" class="py-5 text-center text-light">
+    <div class="container">
+        <h1 class="mt-5">Sell your property with us</h1>
+        <p>
+            Whether its your first time or tenth time selling a property it can be a confusing and difficult process.
+        </p>
+        <p>
+            But this is where an experienced agent such as CHF comes into play.
+        </p>
+        <p class="mb-5">
+            <a href="#" class="text-light font-weight-bold">Enquire Here</a>
+        </p>
+    </div>
+</div>
+<div class="container my-5">
+    <h1 class="text-center text-uppercase brand-text display-4">Featured properties</h1>
+    <div class="row text-center featured-houses">
+        <div class="loader-box loader-light">
+            <div class="loader1"></div>
+        </div>
+    </div>
+</div>
+<div class="brand-bg py-5" id="different">
+    <div class="container">
+        <h1 class="text-uppercase text-center text-light display-4">How we're different</h1>
+        <div class="row mt-4">
+            {% for different in how_were_different %}
+                {% if forloop.counter0|divisibleby:2 %}
+                    {% if not forloop.first %}
+                        </div>
+                        <div class="row mt-4">
+                    {% endif %}
+                    <div class="col-md-6 different-card">
+                        <div class="row">
+                            <div class="col-6 text-right">
+                                <img src="{{ different.img.url }}" alt="{{ different.name }}" title="{{ different.name }}">
+                            </div>
+                            <div class="col-6 text">
+                                <p class="text-uppercase h5">
+                                    {{ different.desc }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="col-md-6 different-card">
+                        <div class="row">
+                            <div class="col-6 text text-right">
+                                <p class="text-uppercase h5">
+                                    {{ different.desc }}
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <img src="{{ different.img.url }}" alt="{{ different.name }}" title="{{ different.name }}">
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="container my-5">
+    <h1 class="display-4 text-center text-uppercase brand-text">What our customers say</h1>
+    <div id="carouselTestimonials" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            {% for testimonial in testimonials %}
+                <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                    <img class="d-block w-100" src="{{ testimonial.img.url }}" alt="">
+                </div>
+            {% endfor %}
+        </div>
+        <a class="carousel-control-prev" href="#carouselTestimonials" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselTestimonials" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(function () {
+        setupMainCarousel($("#mainCarousel"), 150);
+        loadFeaturedHouses($(".featured-houses"));
+    });
+</script>
+{% endblock %}

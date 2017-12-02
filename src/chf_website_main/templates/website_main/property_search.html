@@ -1,0 +1,102 @@
+{% extends 'website_main/base.html' %}
+{% block content %}
+    <div class="brand-bg">
+        <div class="container py-3 text-light text-center ">
+            <h2>Advanced search</h2>
+            <div class="mb-2">
+                <span class="mr-2 h4">Price:</span>
+                <b class="mr-3">< 50,000</b>
+                <input id="price" type="text" class="span2" value="" data-provide="slider"
+                        data-slider-min="50000" data-slider-max="1000000" data-slider-step="1000"
+                        data-slider-value="[50000,1000000]"/>
+                <b class="ml-3">> 1,000,000</b>
+            </div>
+            <div class="mb-2">
+                <span class="mr-2 h4">Distance:</span>
+                <b class="mr-3">0 miles</b>
+                <input id="distance" type="text" class="span2" value="" data-provide="slider"
+                        data-slider-min="0" data-slider-max="50" data-slider-step="1"
+                        data-slider-value="[0,10]"/>
+                <b class="ml-3">> 50 miles</b>
+            </div>
+            <div>
+                <span class="mr-2 h4">Sold:</span>
+                <select id="sold">
+                    <option value="0">Either</option>
+                    <option value="1">For sale</option>
+                    <option value="2">Sold STC</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="results loader-container">
+        <div class="loader-box brand-bg" style="display: none;">
+            <div class="loader1"></div>
+        </div>
+        <div class="container py-4">
+            <h2 id="results-header" class="text-center"></h2>
+            <div class="card my-4 house" style="display: none;">
+                <div class="card-body">
+                    <h3 class="card-title brand-text"></h3>
+                    <h5 class="card-subtitle mb-2 text-muted"></h5>
+                    <div class="cad-text">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-12 pr-lg-0">
+                                        <div class="corner-ribbon-container">
+                                            <img src=""
+                                                 alt="">
+                                            <div class="corner-ribbon"><span></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-12 pl-lg-0">
+                                        <img src=""
+                                             alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="mt-4 mt-md-0"></h5>
+                                <ul class="brand">
+                                </ul>
+                                <h4></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block scripts %}
+    <script>
+        const search = "{{ search }}";
+
+        $(function () {
+            $(".search form").submit(function () {
+                const location = $("#property-search").val();
+                if (location !== "") {
+                    const price = $("#price").val().split(",").map(v => parseInt(v)).map(v => {
+                        if (v === 50000) return -1;
+                        if (v === 1000000) return -1;
+                        return v
+                    });
+                    const distance = $("#distance").val().split(",").map(v => parseInt(v)).map(v => {
+                        if (v === 50) return -1;
+                        return v
+                    });
+                    const sold = $("#sold").val();
+                    console.log(price, distance, sold);
+                    doPropertySearch(location);
+                }
+                return false;
+            });
+            $(document).on("click", ".house", function () {
+                const id = $(this).data("house-id");
+                window.location = "/properties/" + encodeURIComponent(id);
+            });
+            doPropertySearch(search);
+        });
+    </script>
+{% endblock %}

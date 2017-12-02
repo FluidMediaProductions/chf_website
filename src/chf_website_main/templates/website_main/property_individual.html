@@ -1,0 +1,96 @@
+{% extends 'website_main/base.html' %}
+{% block content %}
+<div class="property loader-container">
+    <div class="loader-box brand-bg" style="display: none;">
+        <div class="loader1"></div>
+    </div>
+    <div class="property-body" style="display: none;">
+
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-8 col-sm-12">
+                    <h1 id="house-name" class="font-weight-bold brand-text"></h1>
+                    <h3 id="address" class="font-weight-bold"></h3>
+                </div>
+                <div class="col-md-4 col-sm-12">
+                    <h2 id="price" class="mt-3 font-weight-bold"></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-md-12 mb-4">
+                    <div id="houseImageCarousel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                        </ol>
+                        <div class="carousel-inner">
+                        </div>
+                        <a class="carousel-control-prev" href="#houseImageCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#houseImageCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <div class="corner-ribbon"><span></span></div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <h3 class="font-weight-bold brand-text">Key features</h3>
+                    <ul class="brand" id="features">
+                    </ul>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-light py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="mb-3 font-weight-bold brand-text">Description</h2>
+                        <p id="description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container py-4" id="floorplan">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h2 class="font-weight-bold brand-text">Floorplan</h2>
+                    <img src="" alt="Floorplan">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    var map;
+    var marker;
+    var id = {{ id }};
+
+    $(function () {
+        loadProperty(id, map, marker);
+        $(document).on('keyup', function(e) {
+            if(e.which === 39){
+                $('#houseImageCarousel').carousel('next');
+            }
+            else if(e.which === 37){
+                $('#houseImageCarousel').carousel('prev');
+            }
+        });
+    });
+
+    function initMap() {
+        var center = {lat: 0, lng: 0};
+        map = new google.maps.Map($("#map").get(0), {
+            zoom: 14,
+            center: center
+        });
+        marker = new google.maps.Marker({
+            position: center,
+            map: map
+        });
+    }
+</script>
+{% endblock %}

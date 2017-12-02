@@ -1,0 +1,251 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <title>{{ site_config.site_name }}</title>
+</head>
+<body>
+<div class="bg-dark text-white">
+    <div class="container py-3">
+        <div class="row">
+            <div class="col-lg-6 col-md-4 h5 mb-0 text-uppercase">{{ site_config.site_name }}
+                - {{ site_config.slogan }}</div>
+            <div class="col-lg-3 col-md-4 h5 my-3 m-md-0">
+                <i class="fa fa-envelope brand-text" aria-hidden="true"></i>
+                <span>{{ site_config.contact_email }}</span>
+            </div>
+            <div class="col-lg-3 col-md-4 h5 mb-0">
+                <i class="fa fa-phone brand-text" aria-hidden="true"></i>
+                <span>{{ site_config.contact_phone }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+{% if msg %}
+    <div class="container py-2 top-msg">
+        <div class="alert {% if not msg_status %}alert-success{% else %}alert-{{ msg_status }}{% endif %} alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          {{ msg }}
+        </div>
+    </div>
+{% endif %}
+<div class="container py-3">
+    <div class="row">
+        <div class="col-md-3 text-center text-md-left">
+            <a href="/">
+                <img src="{% static 'img/logo.png' %}" alt="">
+            </a>
+        </div>
+        <div class="col-md-9">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="float-md-right text-center text-md-left">
+                        <a href="{% url 'index' %}#different" class="btn btn-primary btn-lg text-uppercase">How we're different</a>
+                        <a href="{% url 'contact' %}" class="btn btn-primary btn-lg text-uppercase">Book a valuation</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-pills justify-content-md-end justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == "/" %}active{% endif %}" href="{% url 'index' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == "/properties/" %}active{% endif %}" href="{% url 'properties' %}">For sale</a>
+                        </li>
+                        {% for page in pages %}
+                            {% url 'page' page.slug as link %}
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == link %}active{% endif %}" href="{{ link }}">{{ page.title }}</a>
+                            </li>
+                        {% endfor %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == "/contact/" %}active{% endif %}" href="{% url 'contact' %}">Get in touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="search brand-bg py-4">
+    <form action="{% url 'properties_search' %}" method="get">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-auto col-sm-12">
+                    <h3 class="text-light my-2 text-center">Property search</h3>
+                </div>
+                <div class="col-md col-sm-12">
+                    <div class="input-group">
+                        <input type="text" id="property-search" class="form-control form-control-lg address-autofill"
+                               placeholder="POSTCODE/AREA e.g. Magor, NP26" aria-label="Search for..." name="search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-dark btn-lg" type="submit">Search</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+{% block content %}
+{% endblock %}
+<div class="footer">
+    <div class="container partners my-5">
+        <h1 class="brand-text text-uppercase text-center">Our partners</h1>
+        <div class="row">
+            {% for partner in partners %}
+                <div class="col">
+                    <a href="{{ partner.url }}">
+                        <img src="{{ partner.img.url }}" alt="{{ partner.name }}" title="{{ partner.name }}">
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="bg-dark">
+        <div class="container py-5">
+            <div class="row d-flex align-items-center">
+                <div class="col-md-4">
+                    <h3 class="text-light mb-0">Subscribe to our newsletter</h3>
+                </div>
+                <div class="col-md-8">
+                    <form method="post" action="{% url "newsletter_add" %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="next" value="{{ request.path }}">
+                        <div class="form-row">
+                            <div class="col-md-4">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-user fa-fw"></i>
+                                    </span>
+                                    <input type="text" name="name" class="form-control" required placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="input-group input-group-lg">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope fa-fw"></i>
+                                    </span>
+                                    <input type="email" name="email" class="form-control" required placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button type="submit" class="btn btn-primary btn-lg text-light">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-3">
+        <div class="row">
+            <div class="col-md-12 col-lg-3 text-center">
+                <img src="{% static 'img/logo.png' %}" alt="">
+            </div>
+            <div class="col-md-8 col-lg-6 text-center">
+                <div class="row mt-3">
+                    <div class="col-md-6 h5 mb-0 text-right">
+                        <i class="fa fa-envelope brand-text" aria-hidden="true"></i>
+                        <span>{{ site_config.contact_email }}</span>
+                    </div>
+                    <div class="col-md-6 h5 mb-0 text-left">
+                        <i class="fa fa-phone brand-text" aria-hidden="true"></i>
+                        <span>{{ site_config.contact_phone }}</span>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-12 h5 mb-0">
+                        {{ site_config.address }}
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3 text-center mt-3 mt-md-0">
+                <h4 class="brand-text text-uppercase">Get social</h4>
+                <span class="h1 socials">
+                    {% for social in social_media %}
+                        <a href="{{ social.link }}" title="{{ social.name }}">
+                            <i class="fa {{ social.icon }}" data-colour="{{ social.colour }}" aria-hidden="true"></i>
+                        </a>
+                    {% endfor %}
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="brand-bg text-light pt-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <p class="text-uppercase text-center text-sm-left">Copyright {% now "Y" %} CHF Estate Agents</p>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <p class="text-center text-sm-right">
+                        Website by
+                        <a href="https://fluidmedia.wales" class="text-light">Fluid Media Productions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.ravenjs.com/3.17.0/raven.min.js" crossorigin="anonymous"></script>
+<script>
+    Raven.config('https://a1942a36b8cf4cd298bd0f471958f3dc@sentry.io/208557').install();
+</script>
+<noscript>
+    <link href="{% static 'froala_editor/css/froala_editor.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+    <link href="{% static 'froala_editor/css/froala_style.min.css' %}" type="text/css" media="all" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.min.css' %}">
+</noscript>
+<script async src="https://use.fontawesome.com/efab83f16e.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" media="all" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/bootstrap-slider.min.js"></script>
+<script type="text/javascript" src="{% static 'froala_editor/js/froala_editor.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script>
+        $("head").append($("<link rel=\"stylesheet\" href=\"{% static 'css/bootstrap.min.css' %}\">"))
+            .append($("<link rel=\"stylesheet\" href=\"{% static 'css/main.min.css' %}\">"))
+            .append($("<link href=\"{% static 'froala_editor/css/froala_editor.min.css' %}\" rel=\"stylesheet\" />"))
+            .append($("<link href=\"{% static 'froala_editor/css/froala_style.min.css' %}\" rel=\"stylesheet\" />"))
+            .append($("<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.9.0/css/bootstrap-slider.min.css\">"));
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-101940555-1', 'auto');
+    ga('send', 'pageview');
+</script>
+{% block scripts %}
+
+{% endblock %}
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmln4YUTGqCbthSpjkPDbVxE1wQcv1UIM&callback=initGoogleMaps&libraries=places">
+</script>
+</body>
+</html>

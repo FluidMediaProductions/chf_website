@@ -1,0 +1,58 @@
+{% extends 'website_main/base.html' %}
+{% block content %}
+<div class="bg-dark text-light">
+    <div class="container py-5 text-center">
+        <h1 class="text-uppercase font-weight-bold my-4">For sale</h1>
+    </div>
+</div>
+<div class="results loader-container">
+    <div class="loader-box brand-bg" style="display: none;">
+        <div class="loader1"></div>
+    </div>
+    <div class="container py-4">
+        <h2 id="results-header" class="text-center"></h2>
+        <div class="card my-4 house" style="display: none;">
+            <div class="card-body">
+                <h3 class="card-title brand-text"></h3>
+                <h5 class="card-subtitle mb-2 text-muted"></h5>
+                <div class="cad-text">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12 pr-lg-0">
+                                    <div class="corner-ribbon-container">
+                                        <img src=""
+                                             alt="">
+                                        <div class="corner-ribbon"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 pl-lg-0">
+                                    <img src=""
+                                         alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="mt-4 mt-md-0"></h5>
+                            <ul class="brand">
+                            </ul>
+                            <h4></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{% block scripts %}
+<script>
+    $(function () {
+        $(document).on("click", ".house", function () {
+           var id = $(this).data("house-id");
+           window.location = "/properties/" + encodeURIComponent(id);
+        });
+        doPropertySearch("");
+    });
+</script>
+{% endblock %}
