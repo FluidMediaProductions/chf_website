@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'raven.contrib.django.raven_compat',
     'solo.apps.SoloAppConfig',
     'froala_editor',
     'chf_website_main',
@@ -128,10 +127,6 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = []
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-RAVEN_CONFIG = {
-    'dsn': 'https://a1942a36b8cf4cd298bd0f471958f3dc:76d6de7f0eec4b27be900a9f5cdc9c77@sentry.io/208557',
-}
 
 FROALA_INCLUDE_JQUERY = False
 
