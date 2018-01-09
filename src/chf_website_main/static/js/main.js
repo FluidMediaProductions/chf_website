@@ -111,7 +111,7 @@ function loadFeaturedHouses($featuredHouses) {
         </div>
     </div>`);
     $.get({
-        url: "http://148.251.235.232:8001/properties",
+        url: "http://api.chf.uk.com/properties",
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
@@ -165,7 +165,7 @@ function loadProperty(id, map, marker) {
     }, 500);
     $loaderBox.show().parent().css("min-height", window.innerHeight - $loaderBox.offset().top);
     $.get({
-        url: "http://148.251.235.232:8001/properties/" + id,
+        url: "http://api.chf.uk.com/properties/" + id,
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
@@ -258,7 +258,7 @@ function doPropertySearch(location, price, distance, sold) {
         "&sold=" + sold.toString();
     }
     $.get({
-        url: "http://148.251.235.232:8001" + url,
+        url: "http://api.chf.uk.com" + url,
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
