@@ -111,7 +111,7 @@ function loadFeaturedHouses($featuredHouses) {
         </div>
     </div>`);
     $.get({
-        url: "http://api.chf.uk.com/properties",
+        url: "https://api.chf.uk.com/properties",
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
@@ -165,7 +165,7 @@ function loadProperty(id, map, marker) {
     }, 500);
     $loaderBox.show().parent().css("min-height", window.innerHeight - $loaderBox.offset().top);
     $.get({
-        url: "http://api.chf.uk.com/properties/" + id,
+        url: "https://api.chf.uk.com/properties/" + id,
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
@@ -258,7 +258,7 @@ function doPropertySearch(location, price, distance, sold) {
         "&sold=" + sold.toString();
     }
     $.get({
-        url: "http://api.chf.uk.com" + url,
+        url: "https://api.chf.uk.com" + url,
         dataType: "text",
         success: function (d) {
             let data = d.replace(/\\r/g, "\\\\n");
