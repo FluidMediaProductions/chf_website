@@ -81,12 +81,12 @@ WSGI_APPLICATION = 'chf_website.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'postgres'),
-        'USER': os.getenv('DB_USER', 'postgres'),
+        'NAME': os.getenv('DB_NAME', 'chf'),
+        'USER': os.getenv('DB_USER', 'root'),
         'PASSWORD': os.getenv('DB_PASS', ''),
         'HOST': os.getenv('DB_HOST', 'db'),
-        'PORT': 5432,
+        'ENGINE': 'django.db.backends.mysql',
+        'PORT': '',
     }
 }
 
