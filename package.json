@@ -8,6 +8,6 @@
     "babel-preset-minify": "^0.3.0"
   },
   "scripts": {
-    "build": "babel src/static/js-src -d src/static/js"
+    "build": "babel src/chf_website_main/static/js-src -d src/chf_website_main/static/js"
   }
 }
