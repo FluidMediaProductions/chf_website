@@ -1,7 +1,3 @@
-"use strict";
-
-var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-
 /**
  * Created by benjamin on 27/08/17.
  */
@@ -92,7 +88,7 @@ function setupMainCarousel($mainCarousel, minHeight) {
 function loadFeaturedHouses($featuredHouses) {
     var $house = $("\n    <div class=\"col-sm-6 col-lg-3 mt-4\">\n        <div class=\"card\">\n            <div class=\"corner-ribbon-container\">\n                <img class=\"card-img-top\" src=\"\" alt=\"\">\n                <div class=\"corner-ribbon\"><span></span></div>\n            </div>\n            <div class=\"card-body\">\n                <h4 class=\"card-title\"></h4>\n                <h5 class=\"card-subtitle mb-2 text-muted\"></h5>\n                <a href=\"#\" class=\"btn btn-primary\">View</a>\n            </div>\n        </div>\n    </div>");
     $.get({
-        url: "http://148.251.235.232:8001/properties",
+        url: "https://api.chf.uk.com/properties",
         dataType: "text",
         success: function success(d) {
             var data = d.replace(/\\r/g, "\\\\n");
@@ -141,7 +137,7 @@ function loadProperty(id, map, marker) {
     }, 500);
     $loaderBox.show().parent().css("min-height", window.innerHeight - $loaderBox.offset().top);
     $.get({
-        url: "http://148.251.235.232:8001/properties/" + id,
+        url: "https://api.chf.uk.com/properties/" + id,
         dataType: "text",
         success: function success(d) {
             var data = d.replace(/\\r/g, "\\\\n");
@@ -231,7 +227,7 @@ function doPropertySearch(location, price, distance, sold) {
         url = "/properties/search/" + encodeURIComponent(location) + "?pricemin=" + price[0].toString() + "&pricemax=" + price[1].toString() + "&distmin=" + distance[0].toString() + "&distmax=" + distance[1].toString() + "&sold=" + sold.toString();
     }
     $.get({
-        url: "http://148.251.235.232:8001" + url,
+        url: "https://api.chf.uk.com" + url,
         dataType: "text",
         success: function success(d) {
             var data = d.replace(/\\r/g, "\\\\n");
