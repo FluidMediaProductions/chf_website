@@ -67,11 +67,13 @@ def contact(request):
             }
             content = template.render(context)
 
+            site_config = SiteConfiguration.get_solo()
+
             email = EmailMessage(
                 "New contact form submission",
                 content,
                 "<Your website CHF Estate agents> hello@fluidmedia.wales",
-                ['beninjam174@gmail.com'],
+                [site_config.contact_email],
                 reply_to=[contact_email]
             )
             email.send()
