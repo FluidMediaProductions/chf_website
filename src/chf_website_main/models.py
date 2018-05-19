@@ -9,6 +9,9 @@ class SiteConfiguration(SingletonModel):
     contact_email = models.EmailField(default="sales@chf.uk.com")
     contact_phone = models.CharField(max_length=20, default="(01633) 881 844")
     address = models.TextField(max_length=255, default="Salisbury House, The Square, Magor, Newport, NP26 3HY")
+    privacy_policy = models.FileField(blank=True, upload_to='media/%Y/%m/%d/')
+    data_privacy_notice = models.FileField(blank=True, upload_to='media/%Y/%m/%d/')
+    data_access_form = models.FileField(blank=True, upload_to='media/%Y/%m/%d/')
 
 
 class FrontPageSliderImage(models.Model):
