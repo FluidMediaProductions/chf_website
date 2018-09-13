@@ -1,0 +1,32 @@
+server {
+    listen 80;
+    server_name chf.uk.com www.chf.uk.com;
+
+    location / {
+        rewrite ^ https://chf.uk.com$request_uri? permanent;
+    }
+}
+
+#server {
+#    listen 443;
+#    server_name chf.uk.com www.chf.uk.com;
+#    charset utf-8;
+#
+#    ssl on;
+#    ssl_certificate         /etc/letsencrypt/live/chf.uk.com/fullchain.pem;
+#    ssl_certificate_key     /etc/letsencrypt/live/chf.uk.com/privkey.pem;
+#    ssl_trusted_certificate /etc/letsencrypt/live/chf.uk.com/fullchain.pem;
+#    
+#    location /static {
+#        alias /opt/apps/chf_website/src/static;
+#    }
+#   
+#    location /media {
+#        alias /opt/apps/chf_website/src/media;
+#    }
+#        
+#    location / {
+#        include uwsgi_params;
+#        uwsgi_pass unix:///run/uwsgi/chf_website.sock;
+#    }
+#}

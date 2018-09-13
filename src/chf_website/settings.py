@@ -25,7 +25,7 @@ SECRET_KEY = '2b1u)*($mm805a298^j%zpb+krs%lwr#70$2id#qb7*44%ejju'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['chf.uk.com', 'www.chf.uk.com']
 
 
 # Application definition
@@ -79,12 +79,15 @@ WSGI_APPLICATION = 'chf_website.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
+with open(os.path.join(BASE_DIR, "db_pass")) as f:
+  db_pass = f.read()
+
 DATABASES = {
     'default': {
         'NAME': os.getenv('DB_NAME', 'chf'),
-        'USER': os.getenv('DB_USER', 'root'),
-        'PASSWORD': os.getenv('DB_PASS', ''),
-        'HOST': os.getenv('DB_HOST', 'db'),
+        'USER': os.getenv('DB_USER', 'chf'),
+        'PASSWORD': db_pass,
+        'HOST': os.getenv('DB_HOST', 'localhost'),
         'ENGINE': 'django.db.backends.mysql',
         'PORT': '',
     }

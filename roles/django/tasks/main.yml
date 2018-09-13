@@ -1,0 +1,82 @@
+---
+- name: Create folder
+  file:
+    path: /opt/apps/chf_website
+    state: directory
+  run_once: true  
+    
+- name: Create venv
+  shell: "python3 -m virtualenv /opt/apps/chf_website/env"
+  run_once: true
+
+- name: Copy files
+  synchronize:
+    src: src
+    dest: /opt/apps/chf_website/
+    rsync_opts:
+    - "--exclude=db.sqlite3"
+    - "--exclude=media"
+    - "--exclude=static"
+  run_once: true
+  
+- name: Copy db password
+  template:
+    src: templates/db_pass.j2
+    dest: /opt/apps/chf_website/src/db_pass
+    owner: www-data
+    group: www-data
+    mode: 0640
+  run_once: true
+  
+- name: Create db
+  mysql_db:
+    name: chf
+    state: present
+  
+- name: Create db user
+  mysql_user:
+    name: chf
+    host: "%"
+    state: present
+    password: "{{ db_pass}}"
+    priv: "chf.*:ALL"
+  run_once: true
+  
+- name: Install dependencies
+  pip:
+    requirements: /opt/apps/chf_website/src/requirements.txt
+    state: present
+    virtualenv: /opt/apps/chf_website/env
+  run_once: true
+
+- name: Migrate database
+  command: "/opt/apps/chf_website/env/bin/python3 /opt/apps/chf_website/src/manage.py migrate"
+  run_once: true  
+
+- name: Collect static 
+  command: "/opt/apps/chf_website/env/bin/python3 /opt/apps/chf_website/src/manage.py collectstatic --noinput" 
+  run_once: true
+
+- name: Create uWSGI config
+  file:
+    path: /etc/uwsgi/vassals/chf_website.ini
+    src: /etc/uwsgi/vassals/app.skel
+    state: link
+    
+- name: Create nginx config
+  copy:
+    src: files/nginx
+    dest: /etc/nginx/sites-enabled/chf_website
+
+#- name: Issue certificates
+#  shell: "certbot -m {{ letsencrypt_email }} --agree-tos --nginx -d chf.co.uk -d www.chf.co.uk -n certonly"
+#  args:
+#    creates: /etc/letsencrypt/live/chf.uk.com
+    
+- name: Reload nginx
+  service:
+    name: nginx
+    state: reloaded
+    
+- name: Reload vassal
+  command: "touch --no-dereference /etc/uwsgi/vassals/chf_website.ini"

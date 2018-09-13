@@ -1,0 +1,8 @@
+---
+- hosts: web
+  remote_user: root
+  vars_files:
+  - vars/db_pass.yml
+  roles:
+  - django
+      
