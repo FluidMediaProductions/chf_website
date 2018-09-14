@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6f169507-46b5-452e-8c92-3cc57d493d2c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/chf_website.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/chf_website.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chf_website_main/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/chf_website_main/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,11 +21,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chf_website_main/static/css/main.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2839">
+              <caret line="167" selection-start-line="167" selection-end-line="167" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2856">
-              <caret line="168" column="18" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
+            <state relative-caret-position="140">
+              <caret line="190" column="81" selection-start-line="190" selection-start-column="81" selection-end-line="190" selection-end-column="81" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/chf_website_main/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -40,8 +66,11 @@
       <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-end-line="15" />
+            <state relative-caret-position="17">
+              <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,27 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Dockerfile.nginx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dockerfile.nginx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="26" selection-end-line="2" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/chf_website_main/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -150,11 +158,11 @@
         <option value="$PROJECT_DIR$/src/chf_website_main/templates/website_main/property_individual.html" />
         <option value="$PROJECT_DIR$/Dockerfile" />
         <option value="$PROJECT_DIR$/src/start.sh" />
-        <option value="$PROJECT_DIR$/src/chf_website_main/models.py" />
         <option value="$PROJECT_DIR$/src/chf_website_main/static/css/main.css" />
         <option value="$PROJECT_DIR$/src/chf_website_main/templates/website_main/index.html" />
-        <option value="$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html" />
         <option value="$PROJECT_DIR$/src/chf_website_main/views.py" />
+        <option value="$PROJECT_DIR$/src/chf_website_main/models.py" />
+        <option value="$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html" />
       </list>
     </option>
   </component>
@@ -166,6 +174,185 @@
   </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
+    <handled-path value="$PROJECT_DIR$/src/chf_website_main/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/ansi-regex/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/ansi-styles/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/anymatch/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/arr-diff/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/arr-flatten/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/array-unique/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/async-each/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-cli/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-code-frame/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-core/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-generator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-builder-binary-assignment-operator-visitor/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-call-delegate/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-define-map/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-explode-assignable-expression/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-function-name/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-get-function-arity/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-hoist-variables/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-optimise-call-expression/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-regex/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-remap-async-to-generator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helper-replace-supers/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-helpers/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-messages/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-check-es2015-constants/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-syntax-async-functions/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-syntax-exponentiation-operator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-syntax-trailing-function-commas/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-async-to-generator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-arrow-functions/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-block-scoped-functions/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-block-scoping/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-classes/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-computed-properties/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-destructuring/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-duplicate-keys/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-for-of/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-function-name/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-literals/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-modules-amd/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-modules-commonjs/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-modules-systemjs/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-modules-umd/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-object-super/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-parameters/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-shorthand-properties/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-spread/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-sticky-regex/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-template-literals/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-typeof-symbol/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-es2015-unicode-regex/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-exponentiation-operator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-regenerator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-plugin-transform-strict-mode/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-polyfill/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-preset-env/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-register/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-runtime/node_modules/regenerator-runtime/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-runtime/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-template/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-traverse/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babel-types/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/babylon/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/balanced-match/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/binary-extensions/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/brace-expansion/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/braces/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/browserslist/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/caniuse-lite/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/chalk/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/chokidar/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/commander/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/concat-map/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/convert-source-map/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/core-js/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/core-util-is/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/debug/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/detect-indent/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/electron-releases/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/electron-to-chromium/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/escape-string-regexp/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/esutils/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/expand-brackets/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/expand-range/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/extglob/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/filename-regex/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/fill-range/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/for-in/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/for-own/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/fs-readdir-recursive/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/fs.realpath/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/glob-base/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/glob-parent/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/glob/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/globals/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/graceful-fs/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/has-ansi/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/home-or-tmp/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/inflight/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/inherits/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/invariant/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-binary-path/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-buffer/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-dotfile/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-equal-shallow/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-extendable/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-extglob/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-finite/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-glob/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-number/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-posix-bracket/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/is-primitive/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/isarray/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/isobject/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/js-tokens/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/jsesc/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/json5/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/lodash/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/loose-envify/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/micromatch/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/minimatch/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/minimist/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/mkdirp/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/ms/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/normalize-path/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/number-is-nan/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/object-assign/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/object.omit/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/once/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/os-homedir/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/os-tmpdir/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/output-file-sync/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/parse-glob/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/path-is-absolute/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/preserve/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/private/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/process-nextick-args/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/randomatic/node_modules/is-number/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/randomatic/node_modules/is-number/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/randomatic/node_modules/kind-of/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/randomatic/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/readable-stream/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/readdirp/examples/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/readdirp/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regenerate/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regenerator-runtime/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regenerator-transform/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regex-cache/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regexpu-core/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regjsgen/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regjsparser/node_modules/jsesc/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/regjsparser/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/remove-trailing-separator/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/repeat-element/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/repeat-string/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/repeating/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/safe-buffer/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/semver/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/set-immediate-shim/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/slash/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/source-map-support/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/source-map/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/string_decoder/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/strip-ansi/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/supports-color/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/to-fast-properties/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/trim-right/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/user-home/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/util-deprecate/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/v8flags/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/node_modules/wrappy/package.json" />
+      <path value="$PROJECT_DIR$/src/chf_website_main/package.json" />
+    </packageJsonPaths>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -193,6 +380,12 @@
               <item name="chf_website" type="b2602c69:ProjectViewProjectNode" />
               <item name="chf_website" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="chf_website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chf_website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="chf_website" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -233,114 +426,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-    </configuration>
-    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="INTERPRETER_PATH" value="/bin/bash" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="Docker Deployment">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -350,24 +436,6 @@
       <tasks />
       <arguments />
       <envs />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="chf_website" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
     </configuration>
     <configuration default="true" type="tests" factoryName="Nosetests">
       <module name="chf-scraper" />
@@ -413,23 +481,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="0" />
+    <frame x="-1" y="25" width="1602" height="876" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5021739" side_tool="true" weight="0.18008949" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Python Console" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4978261" weight="0.17897092" />
-      <window_info anchor="right" id="Jenkins" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973932" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.249375" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" id="Jenkins" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -515,13 +582,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../chf-scraper/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../chf-scraper/scraper/scraper.py" />
+    <entry file="file://$PROJECT_DIR$/../chf-scraper/docker-compose.yml" />
     <entry file="file://$PROJECT_DIR$/src/chf_website_main/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5544">
@@ -558,13 +620,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../chf-scraper/server/src/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../chf-scraper/server/src/server.py" />
     <entry file="file://$PROJECT_DIR$/src/chf_website_main/static/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4664">
@@ -572,6 +628,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../chf-scraper/server/src/server.py" />
     <entry file="file://$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4136">
@@ -690,20 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chf_website_main/templates/website_main/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/chf_website_main/templates/website_main/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2856">
-          <caret line="168" column="18" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/chf_website_main/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -731,10 +774,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/chf_website_main/templates/website_main/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="67" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="5" column="73" selection-start-line="5" selection-start-column="53" selection-end-line="5" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chf_website_main/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+        <state relative-caret-position="221">
+          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
